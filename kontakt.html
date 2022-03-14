@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta name="Website" content="Website for a company"/>
+  <meta charset="utf-8">
+  <title>Dachdecker | Gorselink</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="qather" content="">
+  <!-- Bootstrap Style-->
+  <link  href="css/bootstrap.min.css" rel="stylesheet">
+  <link  rel="stylesheet" href="style-bootstrap.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://kit.fontawesome.com/1d691adab7.js" crossorigin="anonymous"></script>
+</head>
+    <body>
+  
+      <!-- Header -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div><a class="navbar-brand font-color-green" href="index.html">Dachdecker | Gorselink</a><small>Dackdeckermeisterbetrieb</small></div>
+
+          <!-- Navbar-->  
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="leistungen.html">Leistungen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="referenzen.html">Referenzen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="kontakt.html">Kontakt</a>
+              </li>
+            </ul>
+          </div>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+		</div>
+      </nav>
+      <!-- section-->
+
+	  	<!-- google maps border -->
+        <div class="container mt-5">
+			<div class="bg-light icon-border-button icon-green">
+			
+			<!-- signs icon -->
+			<i class="position-relative top-0 start-0 translate-middle fas fa-map-signs icon-border font-color-gray font-size-icon"></i>
+				
+				<!-- google maps embed -->
+                <div id="googleMap" style="width:100%;height:400px;position: relative;overflow: hidden;"></div>
+
+								<script>
+									  
+									function myMap(){
+									  const uluru =   { lat: 51.186020549438794, lng:  7.2588945988328435};
+									var mapProp= {
+									  center:uluru,
+									  zoom:12,
+									  styles:[
+									  {
+										"featureType": "landscape",
+										"elementType": "geometry",
+										"stylers": [
+										  {
+											"color": "#ebeced"
+										  },
+										  {
+											"lightness": 35
+										  }
+										]
+									  },
+									  {
+										"featureType": "landscape.natural",
+										"elementType": "geometry",
+										"stylers": [
+										  {
+											"color": "#ebeced"
+										  },
+										  {
+											"lightness": 20
+										  }
+										]
+									  },
+									  {
+										"featureType": "landscape.natural.landcover",
+										"elementType": "geometry",
+										"stylers": [
+										  {
+											"color": "#ebeced"
+										  }
+										]
+									  },
+									  {
+										"featureType": "landscape.natural.terrain",
+										"elementType": "geometry",
+										"stylers": [
+										  {
+											"color": "#ebeced"
+										  }
+										]
+									  },
+									  {
+										"featureType": "poi.government",
+										"elementType": "geometry",
+										"stylers": [
+										  {
+											"color": "#f0fdff"
+										  }
+										]
+									  },
+									  {
+										"featureType": "poi.park",
+										"elementType": "geometry",
+										"stylers": [
+										  {
+											"color": "#d9f2da"
+										  }
+										]
+									  },
+									  {
+										"featureType": "poi.park",
+										"elementType": "labels.icon",
+										"stylers": [
+										  {
+											"color": "#47c270"
+										  }
+										]
+									  },
+									  {
+										"featureType": "poi.park",
+										"elementType": "labels.text.fill",
+										"stylers": [
+										  {
+											"color": "#0b985b"
+										  }
+										]
+									  },
+									  {
+										"featureType": "poi.school",
+										"elementType": "geometry",
+										"stylers": [
+										  {
+											"color": "#ffe5f9"
+										  }
+										]
+									  },
+									  {
+										"featureType": "road",
+										"elementType": "geometry",
+										"stylers": [
+										  {
+											"color": "#70d308"
+										  }
+										]
+									  },
+									  {
+										"featureType": "road",
+										"elementType": "labels.text.fill",
+										"stylers": [
+										  {
+											"color": "#8f8e8c"
+										  }
+										]
+									  },
+									  {
+										"featureType": "road.arterial",
+										"elementType": "geometry.fill",
+										"stylers": [
+										  {
+											"color": "#ebebeb"
+										  }
+										]
+									  },
+									  {
+										"featureType": "road.arterial",
+										"elementType": "geometry.stroke",
+										"stylers": [
+										  {
+											"color": "#adadad"
+										  }
+										]
+									  },
+									  {
+										"featureType": "road.highway",
+										"elementType": "geometry",
+										"stylers": [
+										  {
+											"color": "#70d308"
+										  }
+										]
+									  },
+									  {
+										"featureType": "road.highway.controlled_access",
+										"elementType": "geometry.fill",
+										"stylers": [
+										  {
+											"color": "#70d308"
+										  }
+										]
+									  },
+									  {
+										"featureType": "road.highway.controlled_access",
+										"elementType": "geometry.stroke",
+										"stylers": [
+										  {
+											"color": "#70d308"
+										  }
+										]
+									  },
+									  {
+										"featureType": "road.local",
+										"elementType": "geometry.fill",
+										"stylers": [
+										  {
+											"color": "#fafdff"
+										  }
+										]
+									  },
+									  {
+										"featureType": "road.local",
+										"elementType": "geometry.stroke",
+										"stylers": [
+										  {
+											"color": "#adddff"
+										  }
+										]
+									  },
+									  {
+										"featureType": "water",
+										"elementType": "geometry",
+										"stylers": [
+										  {
+											"color": "#b8dcff"
+										  }
+										]
+									  }
+									]
+									};
+									const map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+								
+									const marker = new google.maps.Marker({
+									  position: uluru,
+									  map: map,
+									  title: "Dackdecker Gorselink",     
+									  animation: google.maps.Animation.BOUNCE,
+									});
+									marker.setAnimation(google.maps.Animation.BOUNCE);
+   										setTimeout(function(){ marker.setAnimation(null); }, 1500);
+								   
+									}
+								   
+								</script>
+								
+								<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-PJzdi8nnqFEaQQWsm542lqd9N1aRbYE&callback=myMap"></script>
+	    	</div>
+
+		</div>
+		<!-- introduction of contact data -->
+		<div class="container px-4 mt-5 d-flex p-2 justify-content-center ">
+			<div class="bg-light icon-border-button-2 icon-green header-green font-color-gray-2">
+
+					<!-- comments icon -->
+					<i class="position-relative top-0 start-50 translate-middle fas fa-comments icon-border font-color-gray font-size-icon"></i>
+
+					<!-- contact data -->
+					<h6 class="text-uppercase fw-bold text-center mb-3">
+						Kontaktieren Sie uns gerne! 
+						</h6>
+					<p class="text-center ">
+						Sie möchten mit uns in Kontakt treten? Schreiben Sie zu uns gerne eine E-Mail und wir melden uns bei ihnen.
+						Alternativ erreichen Sie uns natürlich auch telefonisch.
+						Alle Angaben zu unseren Kontaktdaten sowie unsere Anschrift finden Sie unten.
+					</p>
+				</div>	
+		</div>
+
+		<!-- contact data border -->
+		<div class="container px-4 mt-5 d-flex p-2 justify-content-center">
+				<div class=" bg-light icon-border-button icon-green header-green font-color-gray-2">
+					
+					<!-- book icon -->
+					<i class="position-relative top-0 start-50 translate-middle fas fa-book-open icon-border font-color-gray font-size-icon"></i>
+					
+					<!-- contact data -->
+					<h6 class="text-uppercase fw-bold text-center mb-3">
+						Kontakt
+						</h6>
+						<p><i class="fas fa-home me-3"></i>
+							Friedrichstarße 49
+							<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;42897 Remscheid
+						</p>
+						<p>
+						<i class="fas fa-envelope me-3"></i>
+						info@example.com
+						</p>
+						<p><i class="fas fa-phone me-3"></i> <span>02191-690377</span></p>
+						<p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+				</div>	
+		</div>
+		
+        <!-- Footer -->
+        <footer class="text-center text-lg-start bg-light text-muted mt-5">
+            <!-- Section: Social media -->
+            <section
+            class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+            >
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block"></div>
+            <!-- Left -->
+            </section>
+            <!-- Section: Social media -->
+        
+            <!-- Section: Links  -->
+            <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4">Dachdecker | Gorselink</h6>
+                    <p>
+                    Here you can use rows and columns to organize your footer content. Lorem ipsum
+                    dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                </div>
+                <!-- Grid column -->
+        
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                    NAVIGATION 
+                    </h6>
+					<div class="nav-footer">
+						<p>
+						<a href="index.html" class="text-reset"></u>Home</u></a>
+						</p>
+						<p>
+						<a href="leistungen.html" class="text-reset">Leistungen</a>
+						</p>
+						<p>
+						<a href="referenzen.html" class="text-reset">Referenzen</a>
+						</p>
+						<p>
+						<a href="kontakt.html" class="text-reset">Kontakt</a>
+						</p>
+					</div>
+                </div>
+                <!-- Grid column -->
+        
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                    Rechtliches
+                    </h6>
+					<div class="nav-footer">
+						<p>
+						<a href="impressum.html" class="text-reset">Impressum</a>
+						</p>
+						<p>
+						<a href="#!" class="text-reset">Datenschutzerklärung</a>
+						</p>
+					</div>
+                </div>
+                <!-- Grid column -->
+        
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 icon-green">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                    Kontakt
+                    </h6>
+                    <p><i class="fas fa-home me-3">
+
+                    </i>Friedrichstarße 49
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;42897 Remscheid
+                    </p>
+                    <p>
+                    <i class="fas fa-envelope me-3"></i>
+                    info@example.com
+                    </p>
+                    <p><i class="fas fa-phone me-3"></i> <span>02191-690377</span></p>
+                    <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                </div>
+                <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+            </section>
+            <!-- Section: Links  -->
+        
+            <!-- Copyright -->
+            <div class="text-center p-4 mt-5" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" href="index.html"><span class="font-color-green">www.test.de</span></a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </body>
+</html>
